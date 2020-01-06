@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <ctime>
+#include <Windows.h>
 
 using namespace std;
 
@@ -53,5 +54,7 @@ private:
 
 	const string carListText1 = "Lista zarejestrowanych pojazdów do naprawy:";
 	const string carListText2 = "Marka pojazdu \t nr rejestracji \t stan licznika \t imiê i nazwisko w³aœciciela";
+
+	
 };
 
