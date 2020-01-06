@@ -1,0 +1,5 @@
+wprowadzić sprawdzanie poprawności wpisywanych danych
+wprowadzić funkcję zamieniającą pierwsze litery nazwiska i imienia na duże
+wprowadzić funkcję zczytującą z peselu datę urodzenia.
+
+Wprowadzić nawigację za pomocą strzałek.
