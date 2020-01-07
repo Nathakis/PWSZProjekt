@@ -1,10 +1,12 @@
 #pragma once
 #include <iostream>
+#include <string>
+using namespace std;
 class Worker
 {
 public:
 	Worker();
-	~Worker();
+	~Worker()=default;
 	void addWorker();
 	std::string getBirth();
 	std::string getName();
@@ -15,6 +17,6 @@ private:
 	std::string surname;
 	int pesel;
 	std::string birthdate;
-	void peselToBirth();
+	std::string peselToBirth(int pesel);
 };
 
