@@ -8,15 +8,20 @@ public:
 	Worker();
 	~Worker()=default;
 	void addWorker();
-	std::string getBirth();
-	std::string getName();
-	std::string getSurname();
-	int getPesel();
+	string getBirth();
+	string getName();
+	string getSurname();
+	string getPesel();
 private:
-	std::string name;
-	std::string surname;
-	int pesel;
-	std::string birthdate;
-	std::string peselToBirth(int pesel);
+	string name;
+	string surname;
+	string pesel;
+	string birthdate;
+
+	void peselToBirth(string pesel);
+
+	bool checkName();
+	bool checkSurname();
+	bool checkPesel();
 };
 

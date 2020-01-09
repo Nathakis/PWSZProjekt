@@ -4,7 +4,6 @@
 
 Menu::Menu()
 {
-	this->status = true;
 }
 
 
@@ -12,10 +11,7 @@ int Menu::returnChoiseNumber()
 {
 	return this->choiseNumber;
 }
-bool Menu::returnStatus()
-{
-	return this->status;
-}
+
 void Menu::mainMenu()
 {
 	system ("cls");
@@ -49,10 +45,4 @@ void Menu::mainMenu()
 void Menu::menuUpdate()
 {
 
-}
-
-void Menu::doNull()
-{
-	this->choiseNumber = NULL;
-	cin.clear();
 }

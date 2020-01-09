@@ -8,7 +8,7 @@ class Car
 {
 public:
 	Car();
-	~Car();
+	~Car()= default;
 
 	string getRegisterNumber();
 	string getCarBrand();

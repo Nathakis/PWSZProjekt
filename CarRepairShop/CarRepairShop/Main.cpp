@@ -11,10 +11,12 @@ int main()
 	setlocale(LC_ALL, "");
 	Menu menu;
 	Worker worker;
+	Car car;
 	vector <Worker> workers;
-	//vector <Car> cars;
+	vector <Car> cars;
 	int choisenumber = NULL;
-	int iteration = 0;
+	int iWorker = 0, iCar = 0;
+
 	
 	while (menu.returnChoiseNumber() !=0)
 	{
@@ -29,23 +31,35 @@ int main()
 			system("cls");
 			workers.push_back(worker);
 			workers[workers.size()-1].addWorker();
+			iWorker++;
 			break;
 		case 2:
+			system("cls");
+			cout << "IMIÊ I NAZWISKO" << "\t" << "DATA URODZENIA" << "\t" << "PESEL" << endl;
 			for (auto i = 0; i < workers.size(); i++)
 			{
-				cout << workers[i].getName() <<" "<<workers[i].getSurname()<< "\n" << workers[i].getPesel() << "\n" << endl;
+				cout << workers[i].getName() <<" "<<workers[i].getSurname()<< "\t" <<workers[i].getBirth()<<"\t"<< workers[i].getPesel() << "\t" << endl;
 			}
 			cout << "Aby powróciæ, naciœnij ENTER";
 			system("pause");
 			break;
 		case 3:
-			//menu.registerCar();
+			system("cls");
+			cars.push_back(car);
+			cars[cars.size()-1].addCar();
+				iCar++;
 			break;
 		case 4:
-			//menu.carList();
+			system("cls");
+			cout << "MARKA SAMOCHODU" << "\t" << "NUMER REJESTRACYJNY" << "\t" << "STAN LICZNIKA" << "\t" << "W£AŒCICIEL" << "\t" << "DATA PRZYJÊCIA DO WARSZTATU" << endl;
+			for (auto i = 0; i < cars.size(); i++)
+			{
+				cout << cars[i].getCarBrand() << "\t" << cars[i].getRegisterNumber() << "\t" << cars[i].getDoneKilometers() << "\t" <<cars[i].getOwnerName()<<"\t"<<cars[i].getRegisterDate()<< endl;
+			}
+			cout << "Aby powróciæ, naciœnij ENTER";
+			system("pause");
 			break;
 		}
-		iteration++;
 		choisenumber = NULL;
 	}
 

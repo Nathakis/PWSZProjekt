@@ -1,3 +1,8 @@
-﻿  Main.cpp
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(34,23): warning C4018: '<': signed/unsigned mismatch
+﻿  Worker.cpp
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Worker.cpp(87,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Worker.cpp(101,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Worker.cpp(117,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Worker.cpp(98): warning C4715: 'Worker::checkName': not all control paths return a value
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Worker.cpp(128): warning C4715: 'Worker::checkPesel': not all control paths return a value
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Worker.cpp(112): warning C4715: 'Worker::checkSurname': not all control paths return a value
   CarRepairShop.vcxproj -> F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\Debug\CarRepairShop.exe
