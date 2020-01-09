@@ -16,8 +16,8 @@ void Worker::addWorker()
 	std::cin >> this->surname;
 	std::cout << std::endl << "Podaj PESEL pracownika";
 	std::cin >> this->pesel;
-	this->birthdate = peselToBirth(this->pesel);
-
+	//this->birthdate = peselToBirth(this->pesel);
+	cin.clear();
 }
 std::string Worker::getBirth()
 {

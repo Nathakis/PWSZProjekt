@@ -13,7 +13,7 @@ public:
 
 	int returnChoiseNumber();
 	bool returnStatus();
-	void MainMenu();
+	void mainMenu();
 	void registerWorker();
 	void workersList();
 	void registerCar();
@@ -23,10 +23,11 @@ public:
 	void checkInputOnlyNumbers();
 	void checkInputOnlyLetters();
 	void checkCarBoardIsCorrect();
+	void doNull();
 
 
 private:
-	int choiseNumber = NULL;
+	int choiseNumber = 1;
 	bool status = NULL;
 
 	const string welcome = "Witaj w warsztacie samochodowym firmy ABC";

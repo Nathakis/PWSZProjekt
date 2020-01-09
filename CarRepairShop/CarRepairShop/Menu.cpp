@@ -1,4 +1,5 @@
 #include "Menu.h"
+#pragma warning(disable : 4996) //_CRT_SECURE_NO_WARNINGS
 
 
 Menu::Menu()
@@ -15,7 +16,7 @@ bool Menu::returnStatus()
 {
 	return this->status;
 }
-void Menu::MainMenu()
+void Menu::mainMenu()
 {
 	system ("cls");
 	cout << "Witaj w warsztacie samochodowym firmy ABC" << endl;
@@ -28,7 +29,7 @@ void Menu::MainMenu()
 	cout << this->exitText << endl << endl;
 	cout << this->inputCommand;
 	cin >> this->choiseNumber;
-	switch (choiseNumber)
+	/*switch (choiseNumber)
 	{
 	case 1:
 		break;
@@ -42,9 +43,16 @@ void Menu::MainMenu()
 		status = false;
 		break;
 	}
-
+	*/
+	cin.clear();
 }
 void Menu::menuUpdate()
 {
 
+}
+
+void Menu::doNull()
+{
+	this->choiseNumber = NULL;
+	cin.clear();
 }
