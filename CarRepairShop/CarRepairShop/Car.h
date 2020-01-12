@@ -1,8 +1,11 @@
 #pragma once
+#pragma warning(disable : 4996) //_CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <string>
 #include <windows.h>
 #include <winbase.h>
+#include <ctime>
+#include <algorithm>
 using namespace std;
 class Car
 {
@@ -27,10 +30,12 @@ private:
 	string carBrand;
 	string registerNumber;
 	string registerDate;
-	string systemDate;
-	SYSTEMTIME st;
+	time_t t = time(0);
 
-	string getSystemDate();
+	bool isOwnerNameCorrect();
+	bool isCarBrandCorrect();
+	bool isRegisterNumberCorrect();
+	bool isDoneKilometersCorrect();
 	
 };
 

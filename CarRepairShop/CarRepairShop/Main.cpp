@@ -3,6 +3,7 @@
 #include "Car.h"
 #include "Menu.h"
 #include "Worker.h"
+#pragma warning(disable : 4996) //_CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
@@ -16,13 +17,20 @@ int main()
 	vector <Car> cars;
 	int choisenumber = NULL;
 	int iWorker = 0, iCar = 0;
+	time_t t = time(0);
+	
 
 	
-	while (menu.returnChoiseNumber() !=0)
+	while (menu.returnChoiseNumber() !=00)
 	{
 		cin.clear();
 		
 		system("cls");
+
+		tm* now = localtime(&t);
+		cout << (now->tm_hour) << ":" << (now->tm_min) << ":" << (now->tm_sec) << endl;
+		cout << (now->tm_mday) << "." << (now->tm_mon+1) << "." << (now->tm_year+1900) << "r." << endl;
+
 		menu.mainMenu();
 		choisenumber = menu.returnChoiseNumber();
 		switch (choisenumber)

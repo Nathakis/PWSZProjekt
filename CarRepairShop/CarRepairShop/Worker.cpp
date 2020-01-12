@@ -83,24 +83,15 @@ void Worker::peselToBirth(string pesel)
 }
 bool Worker::checkName()
 {
-	
-	for (auto i = 0; i < this->name.size(); i++)
+	this->name[0] = toupper(this->name[0]);
+	for (auto i = 1; i < this->name.length(); i++)
 	{
-		if (name[i] == '0' || name[i] == '1'||name[i]=='2'||name[i]=='3'||name[i]=='4'||name[i]=='5'||name[i]=='6'||name[i]=='7'||name[i]=='8'||name[i]=='9')
-		{
-			return false;
-		}
-		else 
-		{
-			return true;
-		}
+		this->name[i] = tolower(this->name[i]);
 	}
-}
-bool Worker::checkSurname()
-{
-	for (auto i = 0; i < this->surname.size(); i++)
+
+	for (auto i = 0; i < this->name.length(); i++)
 	{
-		if (name[i] == '0' || name[i] == '1' || name[i] == '2' || name[i] == '3' || name[i] == '4' || name[i] == '5' || name[i] == '6' || name[i] == '7' || name[i] == '8' || name[i] == '9')
+		if (this->name[i] < 65 || (this->name[i] > 90 && this->name[i] < 97) || this->name[i]>122)
 		{
 			return false;
 		}
@@ -109,6 +100,30 @@ bool Worker::checkSurname()
 			return true;
 		}
 	}
+
+	
+}
+bool Worker::checkSurname()
+{
+	this->surname[0] = toupper(this->surname[0]);
+	for (auto i = 1; i < this->surname.length(); i++)
+	{
+		this->surname[i] = tolower(this->surname[i]);
+	}
+
+	for (auto i = 0; i < this->surname.length(); i++)
+	{
+		if (this->surname[i] < 65 || (this->surname[i] > 90 && this->surname[i] < 97) || this->surname[i]>122)
+		{
+			return false;
+		}
+		else
+		{
+			return true;
+		}
+	}
+
+	
 }
 bool Worker::checkPesel()
 {

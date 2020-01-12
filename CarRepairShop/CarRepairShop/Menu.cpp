@@ -4,6 +4,7 @@
 
 Menu::Menu()
 {
+
 }
 
 
@@ -14,10 +15,9 @@ int Menu::returnChoiseNumber()
 
 void Menu::mainMenu()
 {
-	system ("cls");
 	cout << "Witaj w warsztacie samochodowym firmy ABC" << endl;
 	cout << "Jesteœ w menu g³ównym";
-	cout <<this->dateTime<< localtime << endl<<endl;
+	cout << endl<<endl;
 	cout << this->mainMenuOption1<< endl;
 	cout << this->mainMenuOption2<< endl;
 	cout <<this->mainMenuOption3<< endl;
