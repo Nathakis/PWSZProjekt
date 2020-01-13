@@ -17,15 +17,13 @@ public:
 	string getCarBrand();
 	string getOwnerName();
 	string getRegisterDate();
-
-	int getDoneKilometers();
+	string getDoneKilometers();
 
 	void addCar();
 	
 private:
 
-	int doneKilometers;
-
+	string doneKilometers;
 	string ownerName;
 	string carBrand;
 	string registerNumber;

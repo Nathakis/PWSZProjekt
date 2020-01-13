@@ -59,12 +59,16 @@ int main()
 			break;
 		case 4:
 			system("cls");
-			cout << "MARKA SAMOCHODU" << "\t" << "NUMER REJESTRACYJNY" << "\t" << "STAN LICZNIKA" << "\t" << "W£AŒCICIEL" << "\t" << "DATA PRZYJÊCIA DO WARSZTATU" << endl;
 			for (auto i = 0; i < cars.size(); i++)
 			{
-				cout << cars[i].getCarBrand() << "\t" << cars[i].getRegisterNumber() << "\t" << cars[i].getDoneKilometers() << "\t" <<cars[i].getOwnerName()<<"\t"<<cars[i].getRegisterDate()<< endl;
+				cout << "MARKA SAMOCHODU: " <<cars[i].getCarBrand()<< endl;
+				cout << "NUMER REJESTRACYJNY: " <<cars[i].getRegisterNumber()<< endl;
+				cout << "STAN LICZNIKA: " <<cars[i].getDoneKilometers()<< endl;
+				cout << "W£AŒCICIEL: " <<cars[i].getOwnerName()<< endl;
+				cout << "DATA PRZYJÊCIA DO WARSZTATU: "<<cars[i].getRegisterDate() << endl<<endl<<endl;
 			}
-			cout << "Aby powróciæ, naciœnij ENTER";
+			
+			cout << "Aby powróciæ, naciœnij ENTER" << endl;
 			system("pause");
 			break;
 		}

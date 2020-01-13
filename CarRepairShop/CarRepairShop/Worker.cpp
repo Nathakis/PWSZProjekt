@@ -22,7 +22,7 @@ void Worker::addWorker()
 			}
 		}
 	}
-	std::cout << std::endl << "Podaj nazwisko pracownika";
+	std::cout << std::endl << "Podaj nazwisko pracownika: ";
 	std::cin >> this->surname;
 	if (checkSurname() == false)
 	{
@@ -34,7 +34,7 @@ void Worker::addWorker()
 			}
 		}
 	}
-	std::cout << std::endl << "Podaj PESEL pracownika";
+	std::cout << std::endl << "Podaj PESEL pracownika: ";
 	std::cin >> this->pesel;
 	if (checkPesel() == false)
 	{
@@ -72,12 +72,12 @@ void Worker::peselToBirth(string pesel)
 	std::string day;
 	year = pesel;
 	year.erase(year.begin()+2, year.end());
-	month = pesel;
-	month.erase(month.begin(),month.begin()+4);
-	month.erase(month.begin()+2, month.end());
 	day = pesel;
-	day.erase(day.begin(),day.begin()+2);
+	day.erase(day.begin(),day.begin()+4);
 	day.erase(day.begin()+2, day.end());
+	month = pesel;
+	month.erase(month.begin(),month.begin()+2);
+	month.erase(month.begin()+2, month.end());
 	this->birthdate= day + "." + month + "." + year+"r";
 
 }

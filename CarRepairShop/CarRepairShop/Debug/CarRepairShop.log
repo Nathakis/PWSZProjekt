@@ -1,13 +1,7 @@
 ﻿  Car.cpp
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(59,21): warning C4018: '<': signed/unsigned mismatch
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(63,49): warning C4834: discarding return value of function with 'nodiscard' attribute
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(63,81): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::find': non-standard syntax; use '&' to create a pointer to member
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(63,134): warning C4834: discarding return value of function with 'nodiscard' attribute
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(63,165): error C3867: 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::find': non-standard syntax; use '&' to create a pointer to member
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(65,21): warning C4018: '<': signed/unsigned mismatch
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(82,21): warning C4018: '<': signed/unsigned mismatch
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(90,21): warning C4018: '<': signed/unsigned mismatch
-  Main.cpp
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(47,23): warning C4018: '<': signed/unsigned mismatch
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(63,23): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(61,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(68,20): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(81,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(89,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Car.cpp(101,21): warning C4018: '<': signed/unsigned mismatch
+  CarRepairShop.vcxproj -> F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\Debug\CarRepairShop.exe

@@ -17,7 +17,7 @@ string Car::getOwnerName()
 {
 	return this->ownerName;
 }
-int Car::getDoneKilometers()
+string Car::getDoneKilometers()
 {
 	return this->doneKilometers;
 }
@@ -40,11 +40,13 @@ void Car::addCar()
 		cout << "Nast¹pu³a pomy³ka, spróbuj ponownie podaæ numer rejestracyjny pojazdu: ";
 		cin >> this->registerNumber;
 	}
-	cout << endl << "Podaj imiê i nazwisko w³aœciciela";
+	cout << endl << "Podaj imiê i nazwisko w³aœciciela: ";
+	cin.clear();
+	cin.ignore();
 	getline(cin,this->ownerName);
 	while (isOwnerNameCorrect() == false)
 	{
-		cout << "Nast¹pi³a pomy³ka, wpisz imiê i nazwisko ponownie";
+		cout << "Nast¹pi³a pomy³ka, wpisz imiê i nazwisko ponownie: ";
 		getline(cin, this->ownerName);
 	}
 	cin.clear();
@@ -60,21 +62,18 @@ bool Car::isOwnerNameCorrect()
 	{
 		ownerName[i] = tolower(ownerName[i]);
 	}
-	ownerName[ownerName[ownerName.find * (ownerName.begin(), ownerName.end(), ' ') + 1]] = toupper(ownerName[ownerName.find * (ownerName.begin(), ownerName.end(), ' ')& + 1]);				///DO NAPRAWIENIA
+	int pos = ownerName.find(' ');
+	ownerName[pos+1] = toupper(ownerName[pos + 1]);
 
-	for (auto i = 0; i < ownerName.length(); i++)
+	for (int i = 0; i < ownerName.length(); i++)
 	{
-		if (ownerName[i] < 65 || (ownerName[i] > 90 && ownerName[i] < 97) || ownerName[i]>122)
+		if (ownerName[i]<32||(ownerName[i]>32&&ownerName[i]<48)||(ownerName[i]>57 && ownerName[i] <65)||(ownerName[i]>90 && ownerName[i]<97)||ownerName[i]>122)
 		{
 			return false;
 		}
-		else
-		{
-			return true;
-		}
+		
 	}
-	
-	
+	return true;
 }
 bool Car::isCarBrandCorrect()
 {
@@ -93,9 +92,19 @@ bool Car::isRegisterNumberCorrect()
 		{
 			return false;
 		}
-		else
-		{
-			return true;
-		}
+		
 	}
+	return true;
+}
+bool Car::isDoneKilometersCorrect()
+{
+	for (auto i = 0; i < doneKilometers.size(); i++)
+	{
+		if (doneKilometers[i] < 48 || doneKilometers[i] > 57)
+		{
+			return false;
+		}
+		
+	}
+	return true;
 }
