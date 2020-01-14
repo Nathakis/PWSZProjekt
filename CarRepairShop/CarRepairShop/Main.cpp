@@ -3,9 +3,14 @@
 #include "Car.h"
 #include "Menu.h"
 #include "Worker.h"
+#include <fstream>
+
 #pragma warning(disable : 4996) //_CRT_SECURE_NO_WARNINGS
 
 using namespace std;
+
+
+
 
 int main()
 {
@@ -16,11 +21,87 @@ int main()
 	vector <Worker> workers;
 	vector <Car> cars;
 	int choisenumber = NULL;
-	int iWorker = 0, iCar = 0;
-	time_t t = time(0);
 	
+	time_t t = time(0);
+	int lineNumber;
+	string line;
+	
+	fstream workersList;
+	fstream carList;
+	workersList.open("workersList.txt", ios::in || ios::out);
+	carList.open("carList.txt", ios::in || ios::out);
+	if (workersList.good() == false)
+	{
+		system("cls");
+		cout << "B³¹d wczytywania pliku z list¹ pracowników." << endl;
+		system("pause");
+	}
+	if (carList.good() == false)
+	{
+		system("cls");
+		cout << "B³¹d wczytywania pliku z list¹ samochodów. " << endl;
+		system("pause");
+	}
+	//IMPORT WORKERS DATA
+	lineNumber = 1;
+		while(getline(workersList, line))
+		{
+			switch (lineNumber)
+			{
+			case 1:
+				workers.push_back(worker);
+				workers[lineNumber].setName(line);
+				break;
+			case 2:
+				workers[lineNumber - 1].setSurname(line);
+				break;
+			case 3:
+				workers[lineNumber - 2].setPesel(line);
+				break;
+			case 4:
+				workers[lineNumber - 3].setBirth(line);
+			}
+			lineNumber++;
+			if (lineNumber > 4)
+			{
+				lineNumber -= 3;
+			}
+		}
+
+		//IMPORT CARS DATA
+		lineNumber = 1;
+		while (getline(carList, line))
+		{
+			switch (lineNumber)
+			{
+			case 1:
+				cars.push_back(car);
+				cars[lineNumber].setCarBrand(line);
+				break;
+			case 2:
+				cars[lineNumber - 1].setRegisterNumber(line);
+				break;
+			case 3:
+				cars[lineNumber - 2].setDoneKilometers(line);
+				break;
+			case 4:
+				cars[lineNumber - 3].setOwnerName(line);
+				break;
+			case 5:
+				cars[lineNumber - 4].setRegisterDate(line);
+				break;
+			}
+			lineNumber++;
+			if (lineNumber > 5)
+			{
+				lineNumber -= 4;
+			}
+		
+		}
 
 	
+
+	//MAIN PROGRAM LOOP (MENU)
 	while (menu.returnChoiseNumber() !=00)
 	{
 		cin.clear();
@@ -39,7 +120,7 @@ int main()
 			system("cls");
 			workers.push_back(worker);
 			workers[workers.size()-1].addWorker();
-			iWorker++;
+			
 			break;
 		case 2:
 			system("cls");
@@ -55,7 +136,7 @@ int main()
 			system("cls");
 			cars.push_back(car);
 			cars[cars.size()-1].addCar();
-				iCar++;
+				
 			break;
 		case 4:
 			system("cls");
@@ -75,6 +156,25 @@ int main()
 		choisenumber = NULL;
 	}
 
+	//export Cars data to file
+	for (auto i = 0; i < cars.size(); i++)
+	{
+		
+		carList << cars[i].getCarBrand()<<endl;
+		carList << cars[i].getRegisterNumber()<<endl;
+		carList << cars[i].getDoneKilometers()<<endl;
+		carList << cars[i].getOwnerName()<<endl;
+		carList << cars[i].getRegisterDate()<<endl;
+	}
+	//export workers data to file
+	for (auto i = 0; i < workers.size(); i++)
+	{
+		workersList << workers[i].getName() << endl;
+		workersList << workers[i].getSurname() << endl;
+		workersList << workers[i].getPesel() << endl;
+		workersList << workers[i].getBirth() << endl;
+
+	}
 
 
 

@@ -141,3 +141,21 @@ bool Worker::checkPesel()
 		}
 	}
 }
+
+
+void Worker::setName(string name)
+{
+	this->name = name;
+}
+void Worker::setPesel(string pesel)
+{
+	this->pesel = pesel;
+}
+void Worker::setSurname(string surname)
+{
+	this->surname = surname;
+}
+void Worker::setBirth(string birth)
+{
+	this->birthdate = birth;
+}

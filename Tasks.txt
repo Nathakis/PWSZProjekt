@@ -1,5 +1,4 @@
-wprowadzić sprawdzanie poprawności wpisywanych danych
-wprowadzić funkcję zamieniającą pierwsze litery nazwiska i imienia na duże
-wprowadzić funkcję zczytującą z peselu datę urodzenia.
+Wprowadzić zapis i odczyt do i z pliku przy uruchamianiu programu i po dodaniu nowego pracownika, lub samochodu
+Wprowadzić możliwość usuwania samochodu lub pracownika
 
 Wprowadzić nawigację za pomocą strzałek.

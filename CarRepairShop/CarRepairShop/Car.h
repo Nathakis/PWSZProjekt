@@ -19,6 +19,12 @@ public:
 	string getRegisterDate();
 	string getDoneKilometers();
 
+	void setCarBrand(string brand);
+	void setRegisterNumber(string number);
+	void setDoneKilometers(string kilometers);
+	void setOwnerName(string ownerName);
+	void setRegisterDate(string date);
+
 	void addCar();
 	
 private:

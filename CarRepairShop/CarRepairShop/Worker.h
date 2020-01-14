@@ -12,6 +12,12 @@ public:
 	string getName();
 	string getSurname();
 	string getPesel();
+
+	void setName(string name);
+	void setPesel(string pesel);
+	void setSurname(string surname);
+	void setBirth(string birth);
+
 private:
 	string name;
 	string surname;

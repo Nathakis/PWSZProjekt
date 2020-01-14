@@ -108,3 +108,24 @@ bool Car::isDoneKilometersCorrect()
 	}
 	return true;
 }
+
+void Car::setCarBrand(string brand)
+{
+	this->carBrand = brand;
+}
+void Car::setRegisterNumber(string number)
+{
+	this->registerNumber = number;
+}
+void Car::setDoneKilometers(string kilometers)
+{
+	this->doneKilometers = kilometers;
+}
+void Car::setOwnerName(string ownerName)
+{
+	this->ownerName = ownerName;
+}
+void Car::setRegisterDate(string date)
+{
+	this->registerDate = date;
+}
