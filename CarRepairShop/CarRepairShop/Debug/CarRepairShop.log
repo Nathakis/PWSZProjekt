@@ -1,6 +1,6 @@
 ﻿  Main.cpp
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(128,23): warning C4018: '<': signed/unsigned mismatch
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(143,23): warning C4018: '<': signed/unsigned mismatch
-F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(160,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(134,23): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(149,23): warning C4018: '<': signed/unsigned mismatch
 F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(170,21): warning C4018: '<': signed/unsigned mismatch
+F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\CarRepairShop\Main.cpp(180,21): warning C4018: '<': signed/unsigned mismatch
   CarRepairShop.vcxproj -> F:\Pulpit\STUDIA\Programowanie Zaawansowane\Projekt\CarRepairShop\Debug\CarRepairShop.exe

@@ -24,12 +24,14 @@ int main()
 	
 	time_t t = time(0);
 	int lineNumber;
+	int vectorNumber;
 	string line;
 	
 	fstream workersList;
 	fstream carList;
-	workersList.open("workersList.txt", ios::in || ios::out);
-	carList.open("carList.txt", ios::in || ios::out);
+
+	workersList.open("workersList.txt", ios::in);
+	carList.open("carList.txt", ios::in);
 	if (workersList.good() == false)
 	{
 		system("cls");
@@ -44,57 +46,61 @@ int main()
 	}
 	//IMPORT WORKERS DATA
 	lineNumber = 1;
+	vectorNumber = 0;
 		while(getline(workersList, line))
 		{
 			switch (lineNumber)
 			{
 			case 1:
 				workers.push_back(worker);
-				workers[lineNumber].setName(line);
+				workers[vectorNumber].setName(line);
 				break;
 			case 2:
-				workers[lineNumber - 1].setSurname(line);
+				workers[vectorNumber].setSurname(line);
 				break;
 			case 3:
-				workers[lineNumber - 2].setPesel(line);
+				workers[vectorNumber].setPesel(line);
 				break;
 			case 4:
-				workers[lineNumber - 3].setBirth(line);
+				workers[vectorNumber].setBirth(line);
 			}
 			lineNumber++;
 			if (lineNumber > 4)
 			{
 				lineNumber -= 3;
+				vectorNumber++;
 			}
 		}
 
 		//IMPORT CARS DATA
 		lineNumber = 1;
+		vectorNumber = 0;
 		while (getline(carList, line))
 		{
 			switch (lineNumber)
 			{
 			case 1:
 				cars.push_back(car);
-				cars[lineNumber].setCarBrand(line);
+				cars[vectorNumber].setCarBrand(line);
 				break;
 			case 2:
-				cars[lineNumber - 1].setRegisterNumber(line);
+				cars[vectorNumber].setRegisterNumber(line);
 				break;
 			case 3:
-				cars[lineNumber - 2].setDoneKilometers(line);
+				cars[vectorNumber].setDoneKilometers(line);
 				break;
 			case 4:
-				cars[lineNumber - 3].setOwnerName(line);
+				cars[vectorNumber].setOwnerName(line);
 				break;
 			case 5:
-				cars[lineNumber - 4].setRegisterDate(line);
+				cars[vectorNumber].setRegisterDate(line);
 				break;
 			}
 			lineNumber++;
 			if (lineNumber > 5)
 			{
 				lineNumber -= 4;
+				vectorNumber++;
 			}
 		
 		}
@@ -155,26 +161,33 @@ int main()
 		}
 		choisenumber = NULL;
 	}
+	carList.close();
+	workersList.close();
+	fstream workersListSave("workersList.txt",ios::out);
+	fstream carListSave("carList.txt",ios::out);
 
 	//export Cars data to file
 	for (auto i = 0; i < cars.size(); i++)
 	{
 		
-		carList << cars[i].getCarBrand()<<endl;
-		carList << cars[i].getRegisterNumber()<<endl;
-		carList << cars[i].getDoneKilometers()<<endl;
-		carList << cars[i].getOwnerName()<<endl;
-		carList << cars[i].getRegisterDate()<<endl;
+		carListSave << cars[i].getCarBrand()<<endl;
+		carListSave << cars[i].getRegisterNumber()<<endl;
+		carListSave << cars[i].getDoneKilometers()<<endl;
+		carListSave << cars[i].getOwnerName()<<endl;
+		carListSave << cars[i].getRegisterDate()<<endl;
 	}
 	//export workers data to file
 	for (auto i = 0; i < workers.size(); i++)
 	{
-		workersList << workers[i].getName() << endl;
-		workersList << workers[i].getSurname() << endl;
-		workersList << workers[i].getPesel() << endl;
-		workersList << workers[i].getBirth() << endl;
+		workersListSave << workers[i].getName() << endl;
+		workersListSave << workers[i].getSurname() << endl;
+		workersListSave<< workers[i].getPesel() << endl;
+		workersListSave << workers[i].getBirth() << endl;
 
 	}
+	workersListSave.close();
+	carListSave.close();
+	
 
 
 
